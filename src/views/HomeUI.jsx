@@ -3,6 +3,7 @@ import {
   Container,
   Toolbar,
   Box,
+  Grid,
   Typography,
   Avatar,
   Button,
@@ -59,7 +60,7 @@ function HomeUI() {
             alignItems: "center",
             mx: "auto",
             my: "auto",
-            borderBottom: "3px solid gray",
+            borderBottom: "1px solid #484848",
           }}
         >
           <Box sx={{ textAlign: "left", ml: "20px", mt: "50px" }}>
@@ -135,6 +136,107 @@ function HomeUI() {
               mt: "50px",
               mb: "50px",
               mr: "100px",
+            }}
+          />
+        </Box>
+
+        {/* About Me Section */}
+        <Box
+          sx={{
+            display: "flex",
+            flexDirection: { xs: "column", md: "row" }, // กําหนดการแสดงผล responsive เดี๋ยวทำเสร็จมีเวลา อาจะลองปรับทั้งหมด
+            alignItems: "flex-start"
+          }}
+        >
+          <Box
+            sx={{
+              flex: "1",
+              mt: "20px",
+              textAlign: "center",
+              mr: "200px",
+            }}
+          >
+            <Typography variant="h3" fontWeight="bold">
+              ABOUT ME
+            </Typography>
+          </Box>
+          <Box sx={{ flex: "1", pr: "50px", mt: "20px" }}>
+            <Typography sx={{ fontWeight: "bold", fontSize: "20px" }}>
+              ผมเป็นนักพัฒนาเว็บไซต์ฝั่งฟรอนท์เอนด์ที่ทำงานอยู่ใน กรุงเทพฯ
+              กำลังมองหาโอกาสที่น่าตื่นเต้นในการทำงาน
+              มีพื้นฐานการศึกษาด้านวิศวกรรมซอฟต์แวร์
+            </Typography>
+            <Typography sx={{ fontSize: "12px" }}>
+              ชอบให้ความสำคัญกับการเข้าถึง (accessibility) เมื่อพัฒนาเว็บไซต์
+              มีความกระตือรือร้นและอยากรู้ อยากเห็นเกี่ยวกับการแก้ปัญหาต่างๆ
+              ปัจจุบันกำลังศึกษาเรียนรู้เกี่ยวกับ React.js และการออกแบบ
+              เว็บไซต์เล็กน้อยเมื่อไม่ได้เขียนโปรแกรม ดิฉัน/ผมชอบเล่นฟุตบอล
+              ถ่ายภาพ และเล่นเกม FIFA, Diablo
+              กำลังเรียนรู้เพิ่มเติมเพื่อพัฒนาทักษะอยู่เสมอ
+            </Typography>
+
+            {/* button */}
+            <Box
+              sx={{
+                display: "flex",
+                alignItems: "center",
+                pt: "20px",
+                mb: "30px",
+              }}
+            >
+              <Button
+                variant="contained"
+                fullWidth
+                sx={{
+                  width: "187px",
+                  height: "54px",
+                  textAlign: "center",
+                  borderRadius: "50px",
+                  bgcolor: "#D3E97A",
+                  color: "#0A0A0A",
+                  mr: "10px",
+                }}
+              >
+                CONTACT ME <CircleIcon sx={{ fontSize: "10px", ml: "30px" }} />
+              </Button>
+              <IconButton
+                sx={{
+                  backgroundColor: "#222222",
+                  borderRadius: "50px",
+                  fontSize: "54px",
+                  mr: "10px",
+                }}
+              >
+                <LinkedInIcon sx={{ fontSize: "26px", color: "#D3E97A" }} />
+              </IconButton>
+              <IconButton
+                sx={{
+                  backgroundColor: "#222222",
+                  borderRadius: "50px",
+                  fontSize: "54px",
+                  mr: "10px",
+                }}
+              >
+                <GitHubIcon sx={{ fontSize: "26px", color: "#D3E97A" }} />
+              </IconButton>
+            </Box>
+          </Box>
+        </Box>
+
+        <Box
+          sx={{
+            display: "flex",
+            justifyContent: "center",
+            alignItems: "center",
+            pb: "100px",
+          }}
+        >
+          <Avatar
+            src={pic1}
+            variant="rounded"
+            sx={{
+              width: "900px",
+              height: "500px",
             }}
           />
         </Box>
