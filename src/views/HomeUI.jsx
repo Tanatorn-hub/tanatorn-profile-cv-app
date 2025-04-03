@@ -11,7 +11,8 @@ import {
 } from "@mui/material";
 import React from "react";
 import { Link } from "react-router-dom";
-import pic1 from "../assets/pic1.jpg";
+import pic1 from "../../public/pic1.jpg";
+import pic2 from "../../public/pic2.jpg";
 import CircleIcon from "@mui/icons-material/Circle";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import GitHubIcon from "@mui/icons-material/GitHub";
@@ -145,7 +146,7 @@ function HomeUI() {
           sx={{
             display: "flex",
             flexDirection: { xs: "column", md: "row" }, // กําหนดการแสดงผล responsive เดี๋ยวทำเสร็จมีเวลา อาจะลองปรับทั้งหมด
-            alignItems: "flex-start"
+            alignItems: "flex-start",
           }}
         >
           <Box
@@ -195,9 +196,11 @@ function HomeUI() {
                   bgcolor: "#D3E97A",
                   color: "#0A0A0A",
                   mr: "10px",
+                  fontSize: "12px",
                 }}
               >
-                CONTACT ME <CircleIcon sx={{ fontSize: "10px", ml: "30px" }} />
+                Download Resume{" "}
+                <CircleIcon sx={{ fontSize: "10px", ml: "20px" }} />
               </Button>
               <IconButton
                 sx={{
@@ -228,17 +231,48 @@ function HomeUI() {
             display: "flex",
             justifyContent: "center",
             alignItems: "center",
-            pb: "100px",
+            pb: "40px",
+            borderBottom: "1px solid #484848",
           }}
         >
+          {/* pic */}
           <Avatar
-            src={pic1}
+            src={pic2}
             variant="rounded"
             sx={{
               width: "900px",
               height: "500px",
+              borderRadius: "20px",
             }}
           />
+        </Box>
+
+        {/* My Capabilities section */}
+        <Box
+          sx={{
+            display: "flex",
+            flexDirection: { xs: "column", md: "row" }, // กําหนดการแสดงผล responsive เดี๋ยวทำเสร็จมีเวลา อาจะลองปรับทั้งหมด
+            alignItems: "flex-start",
+            mt: "40px",
+          }}
+        >
+          <Box
+            sx={{
+              flex: "1",
+              textAlign: "center",
+              mr: "200px",
+            }}
+          >
+            <Typography variant="h3" fontWeight="bold">
+              My Capabilities
+            </Typography>
+          </Box>
+
+          <Box sx={{ flex: "1", pr: "50px"}}>
+            <Typography sx={{ fontSize: "12px" }}>
+            ผมมองหาโอกาสในการเพิ่มทักษะใหม่ๆ อยู่เสมอ ทั้งการพัฒนาฟรอนท์เอนด์ แบล็กเอนต์ การออกแบบ UX/UI ฐานข้อมูล
+            </Typography>
+          </Box>
         </Box>
       </Container>
     </>
