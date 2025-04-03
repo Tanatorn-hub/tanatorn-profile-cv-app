@@ -8,6 +8,8 @@ import {
   Avatar,
   Button,
   IconButton,
+  Stack,
+  Chip,
 } from "@mui/material";
 import React from "react";
 import { Link } from "react-router-dom";
@@ -167,7 +169,7 @@ function HomeUI() {
               กำลังมองหาโอกาสที่น่าตื่นเต้นในการทำงาน
               มีพื้นฐานการศึกษาด้านวิศวกรรมซอฟต์แวร์
             </Typography>
-            <Typography sx={{ fontSize: "12px" }}>
+            <Typography sx={{ fontSize: "14px" }}>
               ชอบให้ความสำคัญกับการเข้าถึง (accessibility) เมื่อพัฒนาเว็บไซต์
               มีความกระตือรือร้นและอยากรู้ อยากเห็นเกี่ยวกับการแก้ปัญหาต่างๆ
               ปัจจุบันกำลังศึกษาเรียนรู้เกี่ยวกับ React.js และการออกแบบ
@@ -252,15 +254,16 @@ function HomeUI() {
           sx={{
             display: "flex",
             flexDirection: { xs: "column", md: "row" }, // กําหนดการแสดงผล responsive เดี๋ยวทำเสร็จมีเวลา อาจะลองปรับทั้งหมด
-            alignItems: "flex-start",
-            mt: "40px",
+            pt: "50px",
+            pb: "50px",
+            borderBottom: "1px solid #484848",   
           }}
         >
           <Box
             sx={{
               flex: "1",
-              textAlign: "center",
-              mr: "200px",
+              textAlign: "left",
+              pr: "100px",
             }}
           >
             <Typography variant="h3" fontWeight="bold">
@@ -268,10 +271,35 @@ function HomeUI() {
             </Typography>
           </Box>
 
-          <Box sx={{ flex: "1", pr: "50px"}}>
-            <Typography sx={{ fontSize: "12px" }}>
-            ผมมองหาโอกาสในการเพิ่มทักษะใหม่ๆ อยู่เสมอ ทั้งการพัฒนาฟรอนท์เอนด์ แบล็กเอนต์ การออกแบบ UX/UI ฐานข้อมูล
+          <Box  variant="body1" sx={{flex: "1", pr: "50px",py:"10px"}}>
+            <Typography sx={{ fontSize: "14px" }}>
+              ผมมองหาโอกาสในการเพิ่มทักษะใหม่ๆ อยู่เสมอ ทั้งการพัฒนาฟรอนท์เอนด์
+              แบล็กเอนต์ การออกแบบ UX/UI ฐานข้อมูล
             </Typography>
+            <Stack direction="row" flexWrap="wrap" sx={{ mt: "15px",mb:"10px",rowGap:"16px",gap:"10px",justifyContent: "flex-start", alignItems: "flex-start", }}>
+              {[
+                "HTML",
+                "CSS",
+                "JAVASCRIPT",
+                "FLUTTER",
+                "DART",
+                "IoT",
+                "REACT",
+                "DATABASE",
+              ].map((tag) => (
+                <Chip
+                  key={tag}
+                  label={tag}
+                  variant="outlined"
+                  sx={{
+                    color: "white",
+                    borderColor: "white",
+                    pointerEvents: "none",
+                    
+                  }}
+                />
+              ))}
+            </Stack>
           </Box>
         </Box>
       </Container>
