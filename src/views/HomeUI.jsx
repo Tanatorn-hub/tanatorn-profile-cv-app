@@ -57,7 +57,6 @@ function HomeUI() {
         <Box
           id={"profile"}
           sx={{
-            width: "100%",
             display: "flex",
             justifyContent: "space-between",
             alignItems: "center",
@@ -149,6 +148,7 @@ function HomeUI() {
             display: "flex",
             flexDirection: { xs: "column", md: "row" }, // กําหนดการแสดงผล responsive เดี๋ยวทำเสร็จมีเวลา อาจะลองปรับทั้งหมด
             alignItems: "flex-start",
+            mr:"60px"
           }}
         >
           <Box
@@ -242,8 +242,8 @@ function HomeUI() {
             src={pic2}
             variant="rounded"
             sx={{
-              width: "900px",
-              height: "500px",
+              width: "1322px",
+              height: "798px",
               borderRadius: "20px",
             }}
           />
@@ -254,16 +254,16 @@ function HomeUI() {
           sx={{
             display: "flex",
             flexDirection: { xs: "column", md: "row" }, // กําหนดการแสดงผล responsive เดี๋ยวทำเสร็จมีเวลา อาจะลองปรับทั้งหมด
-            pt: "50px",
-            pb: "50px",
-            borderBottom: "1px solid #484848",   
+            py: "50px",
+            px: "100px",
+            borderBottom: "1px solid #484848",
           }}
         >
           <Box
             sx={{
               flex: "1",
               textAlign: "left",
-              pr: "100px",
+              pl: "60px",
             }}
           >
             <Typography variant="h3" fontWeight="bold">
@@ -271,12 +271,32 @@ function HomeUI() {
             </Typography>
           </Box>
 
-          <Box  variant="body1" sx={{flex: "1", pr: "50px",py:"10px"}}>
-            <Typography sx={{ fontSize: "14px" }}>
+          <Box sx={{ flexBasis: "500px", pr: "50px", py: "10px" }}>
+            <Typography
+              variant="body1"
+              sx={{
+                fontSize: "14px",
+                textAlign: "left",
+                maxWidth: "900px",
+                pr: "30px",
+              }}
+            >
               ผมมองหาโอกาสในการเพิ่มทักษะใหม่ๆ อยู่เสมอ ทั้งการพัฒนาฟรอนท์เอนด์
               แบล็กเอนต์ การออกแบบ UX/UI ฐานข้อมูล
             </Typography>
-            <Stack direction="row" flexWrap="wrap" sx={{ mt: "15px",mb:"10px",rowGap:"16px",gap:"10px",justifyContent: "flex-start", alignItems: "flex-start", }}>
+            <Stack
+              direction="row"
+              flexWrap="wrap"
+              sx={{
+                mt: "15px",
+                mb: "10px",
+                rowGap: "15px",
+                gap: "15px",
+                justifyContent: "flex-start",
+                alignItems: "flex-start",
+                maxWidth: "400px",
+              }}
+            >
               {[
                 "HTML",
                 "CSS",
@@ -293,15 +313,97 @@ function HomeUI() {
                   variant="outlined"
                   sx={{
                     color: "white",
-                    borderColor: "white",
+                    borderColor: "#484848           ",
                     pointerEvents: "none",
-                    
+                    padding: "0 5px",
                   }}
                 />
               ))}
             </Stack>
           </Box>
         </Box>
+
+        {/* My Experience section */}
+        <Box
+          sx={{
+            display: "flex",
+            flexDirection: { xs: "column", md: "row" }, // กําหนดการแสดงผล responsive เดี๋ยวทำเสร็จมีเวลา อาจะลองปรับทั้งหมด
+            py: "50px",
+            px: "100px",
+            borderBottom: "1px solid #484848",
+          }}
+        >
+          <Box
+            sx={{
+              flex: "1",
+              textAlign: "left",
+              pl: "60px",
+              
+            }}
+          >
+            <Typography variant="h3" fontWeight="bold">
+              My Experience
+            </Typography>
+          </Box>
+
+          <Box
+            sx={{
+              flexBasis: "500px",
+            }}
+          >
+            {/* Freelance Developer */}
+            <Box
+              sx={{
+                display: "flex",
+                justifyContent: "space-between",
+                alignItems: "flex-start",
+                mb: "10px",
+                mr: "50px",
+              }}
+            >
+              <Typography sx={{ fontSize: "16px" }}>
+                Freelance Developer
+              </Typography>
+              <Typography sx={{ fontSize: "14px", fontWeight: "light" }}>
+                Nov 2023 – Present
+              </Typography>
+            </Box>
+            <Typography sx={{ fontSize: "14px", pr: "60px" }}>
+              พัฒนาและปรับปรุงส่วนติดต่อผู้ใช้สำหรับเว็บแอปพลิเคชันโดยใช้
+              React.js ทำงานร่วมกับทีมออกแบบ UX/UI
+              เพื่อสร้างประสบการณ์ผู้ใช้ที่น่าประทับใจ
+              ปรับปรุงความเร็วในการโหลดเว็บไซต์ด้วยเทคนิคการเพิ่มประสิทธิภาพต่างๆ
+              ร่วมพัฒนาและดูแลไลบรารีคอมโพเนนต์ภายในองค์กร
+            </Typography>
+
+            {/* Front-End Intern */}
+            <Box
+              sx={{
+                display: "flex",
+                justifyContent: "space-between",
+                alignItems: "flex-start",
+                my: "10px",
+                mr: "50px",
+              }}
+            >
+              <Typography sx={{ fontSize: "16px" }}>
+                Front-End Intern
+              </Typography>
+              <Typography sx={{ fontSize: "14px", fontWeight: "light" }}>
+                Sep 2023 — Nov 2023
+              </Typography>
+            </Box>
+            <Typography sx={{ fontSize: "14px", pr: "60px" }}>
+              พัฒนาเว็บไซต์ลูกค้าโดยใช้ HTML, CSS และ JavaScript
+              ช่วยปรับปรุงการเข้าถึง (Accessibility)
+              ของเว็บไซต์ให้สอดคล้องกับมาตรฐาน WCAG
+              ทำงานร่วมกับทีมแบ็คเอนด์เพื่อเชื่อมต่อ API
+            </Typography>
+          </Box>
+        </Box>
+
+
+
       </Container>
     </>
   );
