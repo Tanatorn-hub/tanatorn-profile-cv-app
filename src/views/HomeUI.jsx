@@ -148,7 +148,7 @@ function HomeUI() {
             display: "flex",
             flexDirection: { xs: "column", md: "row" }, // กําหนดการแสดงผล responsive เดี๋ยวทำเสร็จมีเวลา อาจะลองปรับทั้งหมด
             alignItems: "flex-start",
-            mr:"60px"
+            py: "50px",
           }}
         >
           <Box
@@ -338,10 +338,9 @@ function HomeUI() {
               flex: "1",
               textAlign: "left",
               pl: "60px",
-              
             }}
           >
-            <Typography variant="h3" fontWeight="bold">
+            <Typography variant="h3" sx={{fontWeight:"bold",textTransform: 'uppercase'}}>
               My Experience
             </Typography>
           </Box>
@@ -402,8 +401,40 @@ function HomeUI() {
           </Box>
         </Box>
 
-
-
+        {/* Let’s connect section */}
+        <Box
+          sx={{
+            display: "flex",
+            flexDirection: { xs: "column", md: "row" }, // กําหนดการแสดงผล responsive เดี๋ยวทำเสร็จมีเวลา อาจะลองปรับทั้งหมด
+            py: "50px",
+            px: "100px",
+            borderBottom: "1px solid #484848",
+          }}
+        >
+          <Box
+            sx={{
+              flex: "1",
+              textAlign: "left",
+              pl: "60px",
+            }}
+          >
+            <Typography variant="h3" sx={{fontWeight:"bold",textTransform: 'uppercase'}}>
+            Let’s connect
+            </Typography>
+            <Typography sx={{ fontSize: "14px",mt:"10px"}}>
+                Say hello at {" "}
+                <Box component="span" sx={{borderBottom:"1px solid #D3E97A"}}>
+                S6752D10017@sau.ac.th
+                </Box>
+              </Typography>
+              <Typography sx={{ fontSize: "14px",mt:"10px"}}>
+                For more info, here's my {" "}
+                <Box component="span" sx={{borderBottom:"1px solid #D3E97A"}}>
+                resume
+                </Box>
+              </Typography>
+          </Box>
+        </Box>
       </Container>
     </>
   );
