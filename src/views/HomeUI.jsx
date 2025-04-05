@@ -56,9 +56,10 @@ function HomeUI() {
         </AppBar>
 
         {/* Profile Section */}
+
         <Box
-          id={"profile"}
           sx={{
+            width: "100%",
             display: "flex",
             justifyContent: "space-between",
             alignItems: "center",
@@ -158,20 +159,34 @@ function HomeUI() {
               flex: "1",
               mt: "20px",
               textAlign: "center",
-              mr: "200px",
+              mr: "100px",
+              px: "100px",
             }}
           >
-            <Typography variant="h3" fontWeight="bold">
+            <Typography variant="h3" fontWeight="bold" >
               ABOUT ME
             </Typography>
           </Box>
           <Box sx={{ flex: "1", pr: "50px", mt: "20px" }}>
-            <Typography sx={{ fontWeight: "bold", fontSize: "20px" }}>
+            <Typography
+              sx={{
+                maxWidth: "650px",
+                fontWeight: "bold",
+                fontSize: "20px",
+              }}
+            >
               ผมเป็นนักพัฒนาเว็บไซต์ฝั่งฟรอนท์เอนด์ที่ทำงานอยู่ใน กรุงเทพฯ
               กำลังมองหาโอกาสที่น่าตื่นเต้นในการทำงาน
               มีพื้นฐานการศึกษาด้านวิศวกรรมซอฟต์แวร์
             </Typography>
-            <Typography sx={{ fontSize: "14px" }}>
+            <Typography
+              sx={{
+                maxWidth: "600px",
+                fontSize: "14px",
+                fontWeight: "light",
+                color: "#C7C7C7",
+              }}
+            >
               ชอบให้ความสำคัญกับการเข้าถึง (accessibility) เมื่อพัฒนาเว็บไซต์
               มีความกระตือรือร้นและอยากรู้ อยากเห็นเกี่ยวกับการแก้ปัญหาต่างๆ
               ปัจจุบันกำลังศึกษาเรียนรู้เกี่ยวกับ React.js และการออกแบบ
@@ -268,12 +283,26 @@ function HomeUI() {
               pl: "60px",
             }}
           >
-            <Typography variant="h3" fontWeight="bold">
+            <Typography
+              variant="h3"
+              fontWeight="bold"
+              sx={{
+                textTransform: "uppercase",
+              }}
+            >
               My Capabilities
             </Typography>
           </Box>
 
-          <Box sx={{ flexBasis: "500px", pr: "50px", py: "10px" }}>
+          <Box
+            sx={{
+              flexBasis: "500px",
+              pr: "50px",
+              py: "10px",
+              fontWeight: "light",
+              color: "#C7C7C7",
+            }}
+          >
             <Typography
               variant="body1"
               sx={{
@@ -368,11 +397,20 @@ function HomeUI() {
               <Typography sx={{ fontSize: "16px" }}>
                 Freelance Developer
               </Typography>
-              <Typography sx={{ fontSize: "14px", fontWeight: "light",color:"#C7C7C7" }}>
+              <Typography
+                sx={{ fontSize: "14px", fontWeight: "light", color: "#C7C7C7" }}
+              >
                 Nov 2023 – Present
               </Typography>
             </Box>
-            <Typography sx={{ fontSize: "14px", pr: "60px",color:"#C7C7C7",fontWeight: "light"  }}>
+            <Typography
+              sx={{
+                fontSize: "14px",
+                pr: "60px",
+                color: "#C7C7C7",
+                fontWeight: "light",
+              }}
+            >
               พัฒนาและปรับปรุงส่วนติดต่อผู้ใช้สำหรับเว็บแอปพลิเคชันโดยใช้
               React.js ทำงานร่วมกับทีมออกแบบ UX/UI
               เพื่อสร้างประสบการณ์ผู้ใช้ที่น่าประทับใจ
@@ -393,11 +431,20 @@ function HomeUI() {
               <Typography sx={{ fontSize: "16px" }}>
                 Front-End Intern
               </Typography>
-              <Typography sx={{ fontSize: "14px", fontWeight: "light",color:"#C7C7C7"  }}>
+              <Typography
+                sx={{ fontSize: "14px", fontWeight: "light", color: "#C7C7C7" }}
+              >
                 Sep 2023 — Nov 2023
               </Typography>
             </Box>
-            <Typography sx={{ fontSize: "14px", pr: "60px",color:"#C7C7C7",fontWeight: "light"  }}>
+            <Typography
+              sx={{
+                fontSize: "14px",
+                pr: "60px",
+                color: "#C7C7C7",
+                fontWeight: "light",
+              }}
+            >
               พัฒนาเว็บไซต์ลูกค้าโดยใช้ HTML, CSS และ JavaScript
               ช่วยปรับปรุงการเข้าถึง (Accessibility)
               ของเว็บไซต์ให้สอดคล้องกับมาตรฐาน WCAG
@@ -426,7 +473,10 @@ function HomeUI() {
           >
             <Typography
               variant="h3"
-              sx={{ fontWeight: "bold", textTransform: "uppercase" }}
+              sx={{
+                fontWeight: "bold",
+                textTransform: "uppercase",
+              }}
             >
               Let’s connect
             </Typography>
@@ -504,7 +554,9 @@ function HomeUI() {
               maxWidth: "500px",
             }}
           >
-            <Typography sx={{ fontSize: "16px",color:"#C7C7C7" }}>Name</Typography>
+            <Typography sx={{ fontSize: "16px", color: "#C7C7C7" }}>
+              Name
+            </Typography>
 
             <TextField
               size="small"
@@ -512,14 +564,16 @@ function HomeUI() {
               sx={{ backgroundColor: "#1A1A1A", input: { color: "#fff" } }}
             />
 
-            <Typography sx={{ fontSize: "16px", mt: "20px",color:"#C7C7C7" }}>Email</Typography>
+            <Typography sx={{ fontSize: "16px", mt: "20px", color: "#C7C7C7" }}>
+              Email
+            </Typography>
             <TextField
               size="small"
               fullWidth
               sx={{ backgroundColor: "#1A1A1A", input: { color: "#fff" } }}
             />
 
-            <Typography sx={{ fontSize: "16px", mt: "20px",color:"#C7C7C7" }}>
+            <Typography sx={{ fontSize: "16px", mt: "20px", color: "#C7C7C7" }}>
               Subject
             </Typography>
             <TextField
@@ -528,7 +582,7 @@ function HomeUI() {
               sx={{ backgroundColor: "#1A1A1A", input: { color: "#fff" } }}
             />
 
-            <Typography sx={{ fontSize: "16px", mt: "20px",color:"#C7C7C7" }}>
+            <Typography sx={{ fontSize: "16px", mt: "20px", color: "#C7C7C7" }}>
               Message
             </Typography>
             <TextField
@@ -539,21 +593,21 @@ function HomeUI() {
               sx={{ backgroundColor: "#1A1A1A", input: { color: "#fff" } }}
             />
             <Button
-                variant="contained"
-                fullWidth
-                sx={{
-                  width: "80px",
-                  height: "30px",
-                  textAlign: "center",
-                  borderRadius: "50px",
-                  bgcolor: "#D3E97A",
-                  color: "#0A0A0A",
-                  mt: "20px",
-                  fontSize: "12px",
-                }}
-              >
-                submit
-              </Button>
+              variant="contained"
+              fullWidth
+              sx={{
+                width: "80px",
+                height: "30px",
+                textAlign: "center",
+                borderRadius: "50px",
+                bgcolor: "#D3E97A",
+                color: "#0A0A0A",
+                mt: "20px",
+                fontSize: "12px",
+              }}
+            >
+              submit
+            </Button>
           </Box>
         </Box>
       </Container>
