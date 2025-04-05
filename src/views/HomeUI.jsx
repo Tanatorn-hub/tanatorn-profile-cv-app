@@ -3,7 +3,7 @@ import {
   Container,
   Toolbar,
   Box,
-  Grid,
+  TextField,
   Typography,
   Avatar,
   Button,
@@ -18,6 +18,8 @@ import pic2 from "../../public/pic2.jpg";
 import CircleIcon from "@mui/icons-material/Circle";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import GitHubIcon from "@mui/icons-material/GitHub";
+import XIcon from "@mui/icons-material/X";
+import InstagramIcon from "@mui/icons-material/Instagram";
 
 function HomeUI() {
   return (
@@ -201,7 +203,7 @@ function HomeUI() {
                   fontSize: "12px",
                 }}
               >
-                Download Resume{" "}
+                Download Resume
                 <CircleIcon sx={{ fontSize: "10px", ml: "20px" }} />
               </Button>
               <IconButton
@@ -340,7 +342,10 @@ function HomeUI() {
               pl: "60px",
             }}
           >
-            <Typography variant="h3" sx={{fontWeight:"bold",textTransform: 'uppercase'}}>
+            <Typography
+              variant="h3"
+              sx={{ fontWeight: "bold", textTransform: "uppercase" }}
+            >
               My Experience
             </Typography>
           </Box>
@@ -363,11 +368,11 @@ function HomeUI() {
               <Typography sx={{ fontSize: "16px" }}>
                 Freelance Developer
               </Typography>
-              <Typography sx={{ fontSize: "14px", fontWeight: "light" }}>
+              <Typography sx={{ fontSize: "14px", fontWeight: "light",color:"#C7C7C7" }}>
                 Nov 2023 – Present
               </Typography>
             </Box>
-            <Typography sx={{ fontSize: "14px", pr: "60px" }}>
+            <Typography sx={{ fontSize: "14px", pr: "60px",color:"#C7C7C7",fontWeight: "light"  }}>
               พัฒนาและปรับปรุงส่วนติดต่อผู้ใช้สำหรับเว็บแอปพลิเคชันโดยใช้
               React.js ทำงานร่วมกับทีมออกแบบ UX/UI
               เพื่อสร้างประสบการณ์ผู้ใช้ที่น่าประทับใจ
@@ -388,11 +393,11 @@ function HomeUI() {
               <Typography sx={{ fontSize: "16px" }}>
                 Front-End Intern
               </Typography>
-              <Typography sx={{ fontSize: "14px", fontWeight: "light" }}>
+              <Typography sx={{ fontSize: "14px", fontWeight: "light",color:"#C7C7C7"  }}>
                 Sep 2023 — Nov 2023
               </Typography>
             </Box>
-            <Typography sx={{ fontSize: "14px", pr: "60px" }}>
+            <Typography sx={{ fontSize: "14px", pr: "60px",color:"#C7C7C7",fontWeight: "light"  }}>
               พัฒนาเว็บไซต์ลูกค้าโดยใช้ HTML, CSS และ JavaScript
               ช่วยปรับปรุงการเข้าถึง (Accessibility)
               ของเว็บไซต์ให้สอดคล้องกับมาตรฐาน WCAG
@@ -406,7 +411,8 @@ function HomeUI() {
           sx={{
             display: "flex",
             flexDirection: { xs: "column", md: "row" }, // กําหนดการแสดงผล responsive เดี๋ยวทำเสร็จมีเวลา อาจะลองปรับทั้งหมด
-            py: "50px",
+            pt: "50px",
+            pb: "100px",
             px: "100px",
             borderBottom: "1px solid #484848",
           }}
@@ -418,21 +424,136 @@ function HomeUI() {
               pl: "60px",
             }}
           >
-            <Typography variant="h3" sx={{fontWeight:"bold",textTransform: 'uppercase'}}>
-            Let’s connect
+            <Typography
+              variant="h3"
+              sx={{ fontWeight: "bold", textTransform: "uppercase" }}
+            >
+              Let’s connect
             </Typography>
-            <Typography sx={{ fontSize: "14px",mt:"10px"}}>
-                Say hello at {" "}
-                <Box component="span" sx={{borderBottom:"1px solid #D3E97A"}}>
+            <Typography sx={{ fontSize: "14px", mt: "10px" }}>
+              Say hello at{" "}
+              <Box component="span" sx={{ borderBottom: "1px solid #D3E97A" }}>
                 S6752D10017@sau.ac.th
-                </Box>
-              </Typography>
-              <Typography sx={{ fontSize: "14px",mt:"10px"}}>
-                For more info, here's my {" "}
-                <Box component="span" sx={{borderBottom:"1px solid #D3E97A"}}>
+              </Box>
+            </Typography>
+            <Typography sx={{ fontSize: "14px", mt: "10px" }}>
+              For more info, here's my{" "}
+              <Box component="span" sx={{ borderBottom: "1px solid #D3E97A" }}>
                 resume
-                </Box>
+              </Box>
+            </Typography>
+
+            <Box sx={{ mt: "10px" }}>
+              <IconButton
+                sx={{
+                  borderRadius: "50px",
+                  fontSize: "54px",
+                  mr: "15px",
+                  px: "0px",
+                }}
+              >
+                <LinkedInIcon sx={{ fontSize: "26px", color: "#D3E97A" }} />
+              </IconButton>
+              <IconButton
+                sx={{
+                  borderRadius: "50px",
+                  fontSize: "54px",
+                  mr: "15px",
+                  px: "0px",
+                }}
+              >
+                <GitHubIcon sx={{ fontSize: "26px", color: "#D3E97A" }} />
+              </IconButton>
+              <IconButton
+                sx={{
+                  borderRadius: "50px",
+                  fontSize: "54px",
+                  mr: "15px",
+                  px: "0px",
+                }}
+              >
+                <XIcon sx={{ fontSize: "26px", color: "#D3E97A" }} />
+              </IconButton>
+              <IconButton
+                sx={{
+                  borderRadius: "50px",
+                  fontSize: "54px",
+                  mr: "15px",
+                  px: "0px",
+                }}
+              >
+                <InstagramIcon sx={{ fontSize: "26px", color: "#D3E97A" }} />
+              </IconButton>
+            </Box>
+            <Box
+              sx={{
+                display: "flex",
+                flexDirection: "column",
+                minHeight: "50vh",
+                justifyContent: "flex-end",
+              }}
+            >
+              <Typography variant="body2">
+                &copy; 2023 Tanatorn Phloenmalai. All rights reserved.
               </Typography>
+            </Box>
+          </Box>
+          <Box
+            sx={{
+              width: "100%",
+              maxWidth: "500px",
+            }}
+          >
+            <Typography sx={{ fontSize: "16px",color:"#C7C7C7" }}>Name</Typography>
+
+            <TextField
+              size="small"
+              fullWidth
+              sx={{ backgroundColor: "#1A1A1A", input: { color: "#fff" } }}
+            />
+
+            <Typography sx={{ fontSize: "16px", mt: "20px",color:"#C7C7C7" }}>Email</Typography>
+            <TextField
+              size="small"
+              fullWidth
+              sx={{ backgroundColor: "#1A1A1A", input: { color: "#fff" } }}
+            />
+
+            <Typography sx={{ fontSize: "16px", mt: "20px",color:"#C7C7C7" }}>
+              Subject
+            </Typography>
+            <TextField
+              size="small"
+              fullWidth
+              sx={{ backgroundColor: "#1A1A1A", input: { color: "#fff" } }}
+            />
+
+            <Typography sx={{ fontSize: "16px", mt: "20px",color:"#C7C7C7" }}>
+              Message
+            </Typography>
+            <TextField
+              size="small"
+              fullWidth
+              multiline
+              rows={4}
+              sx={{ backgroundColor: "#1A1A1A", input: { color: "#fff" } }}
+            />
+            <Button
+                variant="contained"
+                fullWidth
+                sx={{
+                  width: "80px",
+                  height: "30px",
+                  textAlign: "center",
+                  borderRadius: "50px",
+                  bgcolor: "#D3E97A",
+                  color: "#0A0A0A",
+                  mt: "20px",
+                  fontSize: "12px",
+                }}
+              >
+                submit
+              </Button>
           </Box>
         </Box>
       </Container>
